@@ -1,0 +1,559 @@
+---------------------------------------Day-11  3/March/23---------------------------------------
+HTML: Hypertext markup Language.
+
+<!DOCTYPE html>
+	-website run faster (speed increases a bit compare to direct using <html>)
+
+<title></title> :
+	-SEO point of view very important.
+	-google first read this(title) then enters into page.
+	-write catchy points here e.g. 10 best clg in pune.
+
+section:
+	-part between tag open and tag closed
+	-html has 90% paired(open and close) tags.
+	-single tag: no need to close e.g <br>, <hr>.
+	-paired tag: need to close tag e.g <body>, <head>, etc.
+
+heading tags:
+	-there are 6 heading tags:-
+		<h1>, <h2>, <h3>, <h4>, <h5>, <h6>.
+	-<h1> : is very IMP SEO point of view
+
+
+img src Tag:
+	-use to display image.
+	<img src=""/>
+	NOTE:should take high quality hd images from client minimum(1000px/1000px).
+		-.jpeg, .png is ok but .web is not ok.
+		-should use open source images not copyright images.
+	-thumb rule: we have to give height and wwidth to image in img src tag compulsarily.
+			otherwise by defualt accroding image size img will be displayed.
+
+	-width should always give in "%", height should always give in "pixels".
+	-Viewport height -width 100 vw.
+
+
+
+
+if you are getting horizontal scroll bar, that means site is not responsive.
+
+inorganic
+organic
+
+
+PPC Model:
+	-pay per click.
+	-google ad.
+
+**google adverse
+**google adsense
+
+---------------------------------------Day-10  2/March/23---------------------------------------
+winSCP Download Link :
+	https://winscp.net/eng/download.php
+
+*** winSCP Login ***
+
+file protocol :
+	select FTP
+Encryption:
+	21
+Host Name :
+	whole subdomain(@shrutipatil.interns2-es.co.in)
+UserName :
+	shrutiPftp@shrutipatil.interns2-es.co.in
+Password :
+	Gana@ftp
+Don't save(password)
+
+
+NOTE : 
+	-It need Strong internet connection.
+	-Check for spelling errors.
+
+
+*** NOTE: have a eye on server side files changed date.
+
+upload files to remote
+	click ok
+left-side is local pc, right part is server side
+
+**to delete on server side:
+select file from server side.
+select file upload.
+
+
+
+index.html:
+	-having index file is 'compulsory' as browser can only read index file.
+	-The page we want to display on our site will be named as index.
+
+root directory :
+	-The main folder is the folder where all our project files are stored.
+	where out index file is located is called root directory.	
+	-we want our file in our root directory.
+	cgi-bin 
+
+
+
+https://shamalshrikhande.interns2-es.co.in/
+http://interns2-es.co.in/cpanel
+
+Username : interns2
+Password : wW3xLTx4Zy
+
+
+
+
+
+****  Resume Points
+
+deployment:
+	Cpanel
+	Ftp
+	winSCP
+
+
+
+what is port number?
+
+-by default for 8080 is potr for http
+
+-SMTP protocol port(for mailing port no) : 110, 143, 243 etc. 
+
+-this are pipelines
+
+-firewall checks all these files.
+
+
+Meet Recording:
+https://jamboard.google.com/karma/u/0/d/1hYZbLHcieTOvOxvHX42JE3FXuG9DNOxQAX4-Kbw1zE0/viewer?pli=1&usp=meet_whiteboard
+
+
+
+
+
+
+
+---------------------------------------Day-9  28/Feb/23---------------------------------------
+
+cgi-bin :
+	default folder.
+	created automatically when subdomain is created/activated
+	we can delete it
+
+
+FTP
+
+filezilla, WinSCP s/w :
+
+-use=upload local pc to server and server to local pc
+interface software  use to local pc to sever
+STPto server
+domian to domian seperation-project to project restrict dveloper
+
+winscp = secure
+file zilla: not escure stored default pasword
+
+-----------Steps to create FTP---------------------
+
+login to cpanel
+
+1.file section -> FTP account
+
+2.add ftp account
+
+	login 
+2.1		(log in)username:
+			YourNameftp
+2.2		domains:
+			select your subdomain name.
+2.3		password:
+			ABCD@321
+2.4		directory:
+			select your Subdomain Name.(this should come automatically after selecting subdomainName)
+
+			remove the part after "/" (otherwise our site(development work) will not be stored in our domain, 
+			it will be stored in some folder.
+			we have to access our site using "/" after our domain name .
+			e.g 
+				YourName.interns2-es.co.in/SomeFolder
+			)
+
+2.5		quota:
+			unlimited
+		
+3.		create FTP Account
+---------------------------------------------------
+
+
+login to cpanel
+
+file section -> FTP account
+
+add ftp account
+
+	login 
+		username
+			shrutipatilftp (same username use as ftp username in winscp)
+		password
+			Gana@ftp
+		dropdown
+			select our Subdomain Name.(this should come automatically after selecting subdomainName)
+		
+
+	remove the part after "/" otherwise our site(development work) will not be stored in our domain, it will e stored in some folder.
+	we have to access our site using / .
+	e.g 
+		shrutipatil.interns2-es.co.in/
+		
+
+	
+
+
+
+	https://filezilla-project.org/download.php?platform=osx
+	
+MY FTP Account :
+
+Username : shrutiPftp
+password : Gana@ftp
+
+---------------------------------------Day-8  28/Feb/23---------------------------------------
+
+shared 
+
+1gb=100-150
+2gb=200-250
+
+VPS
+1gb: 
+2gb:
+
+dedicated server:
+
+browser error due to insuffiecient ram or cpu.
+
+505
+404
+502
+
+
+1. http://interns2-es.co.in/cpanel
+2. login
+Password : wW3xLTx4Zy
+Username : interns2
+Password : wW3xLTx4Zy
+
+after login to Cpanel:
+
+3. goto domains section
+
+4. create new domain.
+
+5. enter subdomain name then domain name.
+	e.g yourNameSurname.interns2-es.co.in
+
+6.click on "just use yourNameSurname.interns2-es.co.in".
+
+7. subdomain is created..!!!!
+
+8. to check if subdomain is activated or not
+	goto browser and type this domain name (yourNameSurname.interns2-es.co.in)
+
+9. Note : it may get activated immediately, or it will take some time (usualy 24 hrs).
+
+
+success: You have successfully created the new “shrutipatil.interns2-es.co.in” domain with the document root of “/home4/interns2/shrutipatil.interns2-es.co.in”.
+
+(shrutipatil.interns2-es.co.in)
+
+after login to cpanel check statistics:
+Inodes: 
+subdomain: 
+
+---------------------------------------Day 26/Feb/23---------------------------------------
+VPS - dedicated server is assigned to us.
+server uptime - server may go down.
+		e.g
+			99.9% server uptime means site will be available 99.9% 
+			time but it may go down at some time
+
+cloud hosting takes bill per hour.
+32GB 20k
+
+10am-11am-32gb-rs.500/-
+regular- Rs.10/- per hour
+abc.com
+Upper limit-128gb
+Lower limit-1gb
+
+on demand service
+
+cpanel
+
+application, software home page is called dashboard
+website home page is called home page
+
+roundcube application
+
+user can access it official email id at : domain name/webmail
+
+email full zaly/bharly mhanje kay?
+
+is this 2GB space shared among all created email ids
+
+myraah - 299plan aws hosting
+
+
+subdomains are case sensitive
+
+**one domain to multiple hosting
+
+
+
+Notes:
+
+
+dedicated server : 
+	- dedicated server is designed according to our need.
+	- hostinger service providers create this dedicated server and provide us.
+	- here we have dedicated server means- a server with its own CPU, RAM, and 	
+	  other configuration.
+
+VPS :
+	- dedicated server is divided into small parts called as VPS.
+	- e.g a dedicated server has 16gb RAM and it is divided into parts 
+		each with 4gb RAM. each of this part is called as VPS.
+
+** Q. is CPU shared among VPS
+
+Shared Hosting : 
+	- this VPS server is given to many(different) users that is called as shared hosting
+	- i.e VPS is shared among multiple users. (e.g VPS with 4gb RAM is shared among multiple users)
+	- with how many users it is shared that depends upon hosting service provider.
+
+ 	
+
+Cloud Hosting : 
+	-no down time.
+	-can be said as advance version of VPS.
+AWS
+
+
+------------------------------------------------------------------------------
+*** marketing strategy : enterprenure level skill ***
+
+what is your buisness, category of buisness (e.g .edu, .org, NGO, Education, etc)
+what service you provide?
+what is name of your buisness?
+what you thinking about tanking .com or .org or .in ..?
+have you checked the domain name? is it available?
+
+if he know or does not about domain name then explain what it is. 
+and availability of domain name, then immediately talk about hosting.
+why server space?
+share hosting, dedicated server.share hosting can handle 100-150 user at a time only.
+2gb = 500-600 people
+can extend to maximum 4gb-5gb.
+
+NOTE : 1.take domain name confirmation from client itself on whatsapp or emaill.
+	2.just mention somewhere that we are taking shared hosting.	
+	
+
+
+
+
+below 100pages :- 1000rs
+upto 100 :- 700rs
+100-200pages :- 600rs
+
+
+we'll understand buisness category and then accordingly recommend identifier
+.personal, .doctor are we can use but not popular so not that recommended to take.
+
+
+shared hosting 1gb : 50-100 pages 
+
+** Webmail : 
+
+
+shared hosting
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------
+If you are wainting then 
+you are not careting
+************* Week Revise *********
+-hosting service
+
+What is registrar in WHOIS?
+The registrant is the legal owner of the domain who registered it.
+The registry is the company which manages the list of a set of domain names.
+The registrar acts as the middleman between the registry and the registrant.
+
+
+www.abc.com
+
+".com" is identifier
+
+-.edu : educational purpose
+.ac,in
+.gov.in: government site
+
+---------  https://ernet.in/
+above link if we want government website request for permission here
+
+
+
+for personal use:
+	recomended to use.me, .in, .personal
+
+Icann : us based non-profit organization that managrd worlld wide database of domain names
+
+all users can use any domain, any company let say clg can use .com (recomended .edu)
+
+domain name naming conventions:
+		-any number of alphabet, digits allowed
+		-no special character allowed
+		-ony hyphen (-) allowed
+		-thry are not case sensitive
+
+---------------------------------------------------------------------------
+
+day1
+icann:
+	non-profit US based organization
+	maintains universal database of domain names
+
+google scroller - google algorithm = searches and manages database
+
+linux vs windows hosting
+.asp
+html
+boostrap
+
+
+windows hosting:
+	compulsory for .net website
+	.asp
+	html
+	boostrap
+
+**what for java? is linux ok?
+
+**learn to talk with customer care.
+
+# Ram :
+	simultaneously how man user are accessing the site (at same time)
+
+# website : how many websites we can upload
+# domain : no of main domain we can use
+# subdomain : no of main domain we can use on that hosted server
+# bandwidth/transfer : uploading downloading in Gb(say 5gb) in month
+# email id : domain email id/official email id
+	     e.g: swami@elitesoftware.co.in
+		each email id cost taken from customer 200-250
+# webspace : hard disk space
+#Cpanel : we can create ftp etc
+
+imp point to check:
+1.ram - static start 1gb sufficient: can handle 100-150 people
+	errors caused due to insufficient ram:
+		"this site can't be reach"
+        	error  404, 405, 403, 505 
+	
+2. webspace mostly
+3.cpanel = instead use apche server if not given cpanel
+3.ssl = https = s-for secure
+	just says msg connection is secure
+	does something encryption/decryption
+	
+4.subdomain:
+	testing, template
+
+myraah, hosting.co.in
+
+# domain add-on : 
+	adding new domain to existing hosting 
+
+**what is vendor
+
+**cloud hosting
+
+domain name prividers sir use:
+	1.hosting.co.in
+	2.myraah
+
+
+Premium domain
+
+** what is premium domain:
+	someone has already brought it , now he wants to sell it
+
+#domain name sale:
+#domain name transfer:
+
+* domainname EPP Code/Secret Code/Authorization
+
+	-availbale in same account from where domain naem has been brought.
+	-transfer domain period 6-7 days
+
+** what about purchased hosting in case of domain transfer
+
+-------------------------------------
+
+hosting-buying server space
+	-without hosting we can book domain name
+	but without domin name cannot buy osting
+
+40min
+
+ram: how fast site is loading
+	no of users handling simultaneously
+
+windows/linux hosting:
+
+windows compulsory for(as both are not opem source)-
+	.net
+
+official email id : 
+		-cost charges to user 200-300 Rs per email id,  even if we are getting it in free
+		e.g shrutipatil@elitesoftware.in
+
+SSL: secure software layer
+	secure will be written in site otherwise "this site is not secure" in site in red color(http not https)
+
+
+bandwidth/transfer: uploading/downloading speed
+
+subdomain:
+	- use to show saple website, inder construction website, template
+
+	e.g:
+		https://demo1.elitesoftwares.co.in/
+
+
+
+
+
+
+
+
+
+=====================================================================
+
+***** Rucurring amount / recurring amount **********
+maintainance :
+	2500 - per renual + amc(both per year)
+**AMC - anuual maintainance cost aournd 5000
+
