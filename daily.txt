@@ -1,3 +1,144 @@
+---------------------------------------Day-13  13/March/23---------------------------------------
+* Inspect shortcu Key : f12
+* disable right click key
+*module plug in
+
+*** Website Structure
+banner
+menu
+footer
+
+
+* Code Reusability
+
+first structural changes
+
+open google
+->search google Map
+->click first link
+->search location
+->click on share
+->select embede map (on top option)
+->
+
+---------------------------------------Day-13  11/March/23---------------------------------------
+What is bootstrap ?
+What is need of bootstrap?
+How we can use both internal css and inline css in one paragraph?
+What is Responsive?
+
+
+What is bootstrap ?
+	-Bootstrap is framework(architecture/skeleton) of external Css.
+	-Thousands of classes are given by bootstrap community.
+	-which we use to make our page structure responsive.
+
+Why, What is need of bootstrap?
+	- we are using bootrap to create structure of responsive page.
+
+
+
+
+*** Types of Sites/Applicaions:
+
+-dynamic website
+
+-static website
+
+-Portal
+ 
+-social networking sites.
+	eng. facebook, instagram, twitter etc.
+-directory listing sites. 
+	e,g justdile
+-mailing application
+	r.g Gmail
+
+
+-App
+-Desktop Application
+-Web application
+-Online Application
+
+ecommerce website vs normal website.
+
+** Site Should be According to UI/UX .
+	-User Interface and User Experience.
+
+
+* NOTE: 
+	1] Images download with extensions:
+	-jpeg, jpg, png, jgif.
+	NOTE: Don't Download image with extension .web
+		that means it is web file its not image.
+	
+	2] Images name should NOT be too long.
+
+	# SEO Related:
+
+	3] Images Name should not MEANINGFULL.
+	     eg.
+		Slider 123, 123 etc are not recommended.
+	4] "alt" is google recommended attribute.
+		eg. <img src="img.jpg" alt="Web Development Service in Pune">
+
+	5] "Google Crawler" scans images name & store it in its  database.
+
+	
+	6] Images should always be of high quality.
+
+	7] slider should not have images more than 7-8
+		as slider is usually on home page. more images will take more
+		time to load home page.
+
+
+### Links ###
+
+* Bootstrap Plugin W3school , Bootstrap carousel with images.
+
+	https://www.w3schools.com/bootstrap/bootstrap_carousel.asp
+
+To Search
+	-Google Crawler
+
+
+
+
+
+---------------------------------------Day-13  9/March/23---------------------------------------
+Missed Bootstrap
+---------------------------------------Day-12  8/March/23---------------------------------------
+WHY CSS ? :
+	-code reusability.
+	-formatting
+
+body section: 
+	that we want to show in out page.
+class creation:
+	two types:
+	1] using dot(.)
+	2] using #
+CSS Types:
+	-inline - first preference
+	-internal - code resusability
+	-external  - share/use in multiple pages
+		   - create folder named as css->create css file
+		     standard name style.css	
+		 - need to link external css file using link tag:
+			<link rel="stylesheet" href="css/style.css" type="text/css"/>
+			type- attribute is optional.
+			relation- attribute use to specify relation(type of file).
+			
+			
+			
+favicon image/icon image : shown in browser tab, before title.
+
+bootstrap:
+
+alt+z: shortcut key.
+
+
+
 ---------------------------------------Day-11  3/March/23---------------------------------------
 HTML: Hypertext markup Language.
 
@@ -30,13 +171,13 @@ img src Tag:
 	-thumb rule: we have to give height and wwidth to image in img src tag compulsarily.
 			otherwise by defualt accroding image size img will be displayed.
 
-	-width should always give in "%", height should always give in "pixels".
+	-for Responsiveness: width should always give in "%", height should always give in "pixels".
 	-Viewport height -width 100 vw.
 
 
 
 
-if you are getting horizontal scroll bar, that means site is not responsive.
+## NOTE : if you are getting horizontal scroll bar, that means site is not responsive.
 
 inorganic
 organic
@@ -50,6 +191,7 @@ PPC Model:
 **google adsense
 
 ---------------------------------------Day-10  2/March/23---------------------------------------
+
 winSCP Download Link :
 	https://winscp.net/eng/download.php
 
