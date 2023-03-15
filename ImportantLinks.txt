@@ -28,3 +28,22 @@ https://www.icann.org/
 shrutipatil.interns2-es.co.in
 
 --------------------------------------------------------------------------
+
+-.edu : educational purpose
+.ac,in
+.gov.in: government site
+
+above link if we want government website request for permission here
+
+https://ernet.in/
+
+
+--------------------------------------------------------------------------
+winSCP Download Link :
+	https://winscp.net/eng/download.php
+
+--------------------------------------------------------------------------
+
+**Link:
+ github aos library
+	https://michalsnik.github.io/aos/

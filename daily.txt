@@ -1,5 +1,65 @@
+---------------------------------------Day-14  13/March/23---------------------------------------
+* google map/my buisness account
+
+---------------
+*** site mapping - sitemap.xml
+
+*** Local Listing
+----------------
+
+* to open href in new tab :
+	<a href="cbc.html" target="_blank">
+
+
+* to print text with same left,right space.
+	"text-align:justify"
+
+
+* hightlight tag
+
+
+---------------------------
+* SEO friendly website building.
+	-bold text in para(<b></b>)
+	-highlight client's buisness related words.
+	-main keyword in <h1> tag	
+---------------------------
+
+
+* color combination should be according to logo color
+	-use colors in logo in site like in over effects etc.
+
+---------------------
+* Motion Effect :
+	-marquee
+	-aos *
+	->copy <script>
+
+
+<head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!--Paste in a div on which you want effect-->
+<div class="col-md-3" data-aos-anchor-placement="bottom-bottom">
+	<!--effect will be applied on image now-->
+	<img src="" data-aos="fade-up">
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+
+**Link:
+ github aos(Animate on scroll) library
+
+	https://michalsnik.github.io/aos/
+
 ---------------------------------------Day-13  13/March/23---------------------------------------
-* Inspect shortcu Key : f12
+* Inspect shortcut Key : f12
 * disable right click key
 *module plug in
 
@@ -18,8 +78,8 @@ open google
 ->click first link
 ->search location
 ->click on share
-->select embede map (on top option)
-->
+->select embed a map (on top option)
+->copy the given link.
 
 ---------------------------------------Day-13  11/March/23---------------------------------------
 What is bootstrap ?
@@ -233,7 +293,7 @@ index.html:
 
 root directory :
 	-The main folder is the folder where all our project files are stored.
-	where out index file is located is called root directory.	
+	where our index file is located is called root directory.	
 	-we want our file in our root directory.
 	cgi-bin 
 
