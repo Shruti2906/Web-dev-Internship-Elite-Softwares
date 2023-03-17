@@ -47,3 +47,15 @@ winSCP Download Link :
 **Link:
  github aos library
 	https://michalsnik.github.io/aos/
+
+================================== Links Usefull In Design Layout development =============================================
+
+* to get color codes for colors:
+	https://htmlcolorcodes.com/
+
+* to get free/open source templates that can be used for commerial purpose.
+	https://www.bootstrapmade.com/
+
+* to get icons:
+	https://icons.getbootstrap.com/
+--------------------------------------------------------------------------
