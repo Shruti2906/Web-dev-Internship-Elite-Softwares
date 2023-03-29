@@ -1,3 +1,74 @@
+https://www.flipkart.com/boat-rockerz-255f-pro-asap-charge-upto-10-hours-playback-bluetooth-headset/p/itm79582d86c717d?pid=ACCGFGGF5Y5YHPYT&lid=LSTACCGFGGF5Y5YHPYTTG5AZ9&marketplace=FLIPKART&q=boat+bluetooth+headphones&store=0pm%2Ffcn%2F821%2Fa7x%2F2rv&srno=s_1_10&otracker=AS_QueryStore_OrganicAutoSuggest_1_25_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_25_na_na_na&fm=search-autosuggest&iid=604743ac-9ae2-4f3e-b19e-17f5f2628006.ACCGFGGF5Y5YHPYT.SEARCH&ppt=sp&ppn=sp&ssid=jak5zhcb0g0000001680075245129&qH=8ffd5ae5b337d901
+
+---------------------------------------Day-19  28/March/23---------------------------------------
+ interns2
+wW3xLTx4Zy
+
+when we purchase our main domain :
+we have to upload our site at domain name (NOT subdomain) :
+
+cPanel->
+	file manager->
+		public_html
+
+		here we other files as well-
+			mail, 
+			public_html,
+			public_ftp,
+			and folder for each subdomain.
+			
+
+-cgi/bin is default folder, wee can delete it.
+-this folder is automatically created in our root directory.
+-with the help of cgi-bin folder we can locate/identify our root directory. 
+
+
+https://www.tawk.to/
+
+zendeek
+
+Screen Recording Chrome Extension :
+	Camtasia chrome extension
+---------------------------------------Day-18  27/March/23---------------------------------------
+to change div cotent-
+delete content first then icon
+
+3 warnings should be given for copyright content.
+
+bootstrap site :
+
+	https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/download/
+
+---------------------------------------Day-17  13/March/23---------------------------------------
+Design Layout modification
+i.e Template Modification.
+
+thinkforest
+colormil.com
+boootstrapmade
+
+	we can use free and use commercially but must do  little structural changes.
+
+
+
+top to bottom
+left to right
+
+95% - 99% img link will be in style.css
+
+https://htmlcolorcodes.com/
+https://www.bootstrapmade.com/
+https://icons.getbootstrap.com/
+
+h/w:
+chnage services to  my project
+
+add new block after 2nd block
+
+change content and text of first blok
+first block will contain only img not content or txt.
+
+tetimonial-feedback-comment
 ---------------------------------------Day-14  13/March/23---------------------------------------
 * google map/my buisness account
 
@@ -341,8 +412,8 @@ https://jamboard.google.com/karma/u/0/d/1hYZbLHcieTOvOxvHX42JE3FXuG9DNOxQAX4-Kbw
 ---------------------------------------Day-9  28/Feb/23---------------------------------------
 
 cgi-bin :
-	default folder.
-	created automatically when subdomain is created/activated
+	-default folder.
+        -created automatically when subdomain is created/activated
 	we can delete it
 
 
