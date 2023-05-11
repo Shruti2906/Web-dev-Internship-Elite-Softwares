@@ -1,5 +1,692 @@
-https://www.flipkart.com/boat-rockerz-255f-pro-asap-charge-upto-10-hours-playback-bluetooth-headset/p/itm79582d86c717d?pid=ACCGFGGF5Y5YHPYT&lid=LSTACCGFGGF5Y5YHPYTTG5AZ9&marketplace=FLIPKART&q=boat+bluetooth+headphones&store=0pm%2Ffcn%2F821%2Fa7x%2F2rv&srno=s_1_10&otracker=AS_QueryStore_OrganicAutoSuggest_1_25_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_25_na_na_na&fm=search-autosuggest&iid=604743ac-9ae2-4f3e-b19e-17f5f2628006.ACCGFGGF5Y5YHPYT.SEARCH&ppt=sp&ppn=sp&ssid=jak5zhcb0g0000001680075245129&qH=8ffd5ae5b337d901
+-------------------------------- PYTHON Django-------Day-30  6/May/23---------------------------------------
+Rename Folder:
 
+	->update project name
+	->update default app name
+	->default app-> settings.py ->ROOT_URLCONF = '' here update name.
+	->wsgi file -> os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DjangoProject1.settings') (this ia gateway data from server to browser)
+	->asgi file -> os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DjangoProject1.settings')
+
+------------------------
+
+	* Migrate Related Error/ Migration Error:
+
+	->http://127.0.0.1:8000/admin/login/?next=/admin/
+		this is admin of django, represents super admin.
+
+   cmd to solve migration error:
+	->py manage.py makemigrations
+	->py manage.py migrate
+---------------------------------
+
+   * to clear browser catche : 
+
+ctrl+shift+r
+--------------------------------
+
+Flow Of Execution
+
+	->"URLs.py" in default app.
+
+     redirect to our app 
+	->in urls.py (defualt app)
+		from django.contrib import admin
+		from django.urls import path, include
+
+		urlpatterns = [
+	        	path('admin/', admin.site.urls),
+  	        	path('',include('website.urls')),
+		    ]
+
+	-> Now "urls.py" file will be read by django.
+	
+	   -here we will define different path and their corresponding functions in "views.py".
+	     eg.
+		'urls.py' in website(app we created):
+
+			from django.contrib import admin
+			from django.urls import path, include
+			from website import views
+
+			urlpatterns = [
+			    path('admin/', admin.site.urls),
+			    path('',include('website.urls')),
+           		]
+
+                 'views.py':
+			from django.http import HttpResponse
+			from django.shortcuts import render
+
+			def home(request):
+			    return HttpResponse("Home page it is")
+
+			def aboutus(request):
+			    return HttpResponse("About us page it is")
+
+* Blank Path : 
+
+	path('',include('website.urls')),
+
+	- blank path is '' where we load home page.
+------------------------------
+
+in "URLs.py" of default app
+	->add blank path in list-> 
+		from django.contrib import admin
+		from django.urls import path, include
+
+		urlpatterns = [
+		    path('admin/', admin.site.urls),
+		    path('',include('websiteurls.py')),
+		]
+
+	-Here we re saying do not go to default app template, 
+	 goto websiteurls.py on blank path
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------- PYTHON Django-------Day-30  6/May/23---------------------------------------
+
+-------------
+Foundation Questions:
+
+What is URL dispatcher?
+what is MVTC arhitecture? What is MVT? what's the difference in them?
+Which IP Django server uses to run application?
+What is use of seetings.py file?
+------------------------------------------
+Framework :
+	-when we use framework we use architecture to develop application
+	-Application built using framework is more ROBUST, SECURE as compared to hard coded language.
+
+* HTML, CSS is a client side scripting language.
+	-we can run .html file simply by double click in browser.
+	-NO need to install server.
+
+* PHP 
+	-is a server side scripting language.
+*DJango
+	-backend server-side web application framework.
+
+* Why python framework is recommended?
+	-integration of AI ML is easy .
+
+---------------------------------------
+
+Why Framework ?
+	-applications built in framework are more robust and secure than hard coded language.
+	-we follow architecture when we use framework for developing application.
+
+---------------------------------------------
+
+Language in Interview ?
+
+	-must start in english.
+	-if we troublig to much to answer in english then speak in hindi slowly.
+	-"don't ask may is speak in hindi", interviwer can say NO.!!
+--------------------------------------------
+
+	URL Dispatcher:
+
+	Django architecture:
+
+	->when user starts django server (runs django project)
+	->django server will first run "urls.py file" present in project folder.
+	->then it will goto "views.py" file.
+		views will contains actual logic.
+		views will contains functions.
+
+	->from view.py it will goto "model" and then to "template".
+
+
+===============================---------
+     Creating Django Project 
+
+Documentation site:
+	djangoproject.com
+	to upgrade version
+		-> --upgrade
+
+	to upgrade pip
+		-> pip install --upgrade pip
+
+ step 1] install Django:    (open cmd)
+	->pip install django
+
+
+ step 2] install extension in VScode:
+	->django by baptiste darthenay
+	
+		so that vs code will support django framework
+
+ step 3] create Django project:
+	->django-admin startproject projectName
+
+	if above cmd is not working then use below given:
+
+	->python -m django startproject projectName.
+
+	
+ step 4] to run Django Project:
+	->cd> projectFolder
+	->projectFolder> py manage.py runserver
+		OR 
+	->projectFolder> python manage.py runserver
+
+-------------------------------
+
+ ** Create App in  django project:
+
+
+ -There must be atleast one app (means module) present in our project.
+
+ -There is one defualt module (named same as project name) present in project in we create a django project.
+ -The defualt module has "settings.py" file.	
+
+ to create app:
+	->py manage.py startapp website(appName)
+
+
+** Configure the app
+
+ -inside 'settings.py' ->Installed Apps = [] mention newly created app(here website)
+	eg. 
+	   INSTALLED_APPS = [
+		    'django.contrib.admin',
+		    'django.contrib.staticfiles',
+		    'website.apps.WebsiteConfig',
+		]
+
+ -"settings.py":
+	-project related settings.
+ 
+ -"models.py":
+	-this is where we cerate table.
+
+ -"view.py":
+	-
+
+
+-------------------------------
+
+*ERROR : Pip is recognized as an internal or external command.
+
+	->google search:
+		->get-pip.py     (file we need to paste it where our python is installed directory)
+
+	->save this file at c:\user\admin (default location when we open cmd)
+
+	->in cmd run command:
+		->python get-pip.py
+	
+-------------------------------
+
+WSGI(web server gateway interface)
+asgi(asynchronous server gateway interface)
+
+
+
+
+
+NOTE: Django is a library
+
+  127.0.0.1:8000 this is unique ip where Django Server will run
+  matrix admin - dashboard design
+
+
+WSGI(web server gateway interface)
+asgi(asynchronous server gateway interface)
+https://project1.elitesoftwares.in/enquiry
+
+-------------------------------- PYTHON Django-------Day-30  5/May/23---------------------------------------
+https://bootstrap.pypa.io/get-pip.py
+-------------------------------- PYTHON File Handling, PIP-------Day-29  4/May/23---------------------------------------
+
+x mode - to create file, gives error if exist already with same name.
+a - to append
+w - to write it will override before text in file(first remove all text in file and then add new text), creates fil if not exist.
+r - to read, creates file if not exist.
+close - to close file
+
+
+PIP:
+	-pip install Django
+
+** Pip is not recognized as an internalor external command.
+->goto
+->save the file at:
+save the file in python installed location like:
+->c:\users\admin 
+
+-----------------
+Connecting SQlite Database using 
+
+	->SQlite database is integrated database in python, so no need to install it.
+
+	->we'll use it as module
+
+	->"sqlite3" is the module name of sqlite database.
+
+
+task: why none was coming autoincreament
+20, 21
+-------------------------------- PYTHON Operators-------Day-28  3/May/23---------------------------------------
+
+Lambda function:
+	anonymous function , single line function 
+	like eg:
+		
+
+library:
+	colllection of modules, packages.
+
+	->install library
+		
+		->pip install libraryName
+
+Modules :
+	collection of functions.
+	-2 Types of module
+	1] Built in module
+	2] external Module.
+
+
+	External Module: 
+		-we can create our own module.
+		-we can create/store functions, dictionaries etc in our module.
+
+
+Function:
+	block of statements.
+-------------------------------- PYTHON Operators-------Day-27  26/Apr/23---------------------------------------
+python collections : 
+
+
+tuple is immutable ()
+	-eg. changing value by indexing position.
+
+list[]:
+	-is mutable/chnagable
+
+
+-------------------------------- PYTHON Operators-------Day-26  21/Apr/23---------------------------------------
+in
+is
+python is 100% case sensitive.
+
+for x in a:
+	print(x)
+
+-------------------------------- Project Fonrtend Modification-------Day-25  20/Apr/23---------------------------------------
+install python, django
+-> unzip folder(Project Final)
+-> cd Project Final
+
+-> py manage.py runserver
+	-to run jango server
+-> 
+
+
+
+
+
+-------------------------------- PYHTON -------Day-24  19/Apr/23---------------------------------------
+
+* literals
+ single line, multiline string
+*type casting
+
+
+-------------------------------- PYHTON -------Day-23  18/Apr/23---------------------------------------
+can't service  ased companies buit their software/product?
+
+>>> = python prompt
+
+
+vs code extension:
+	-code runner
+	-python 
+		by microsoft Intellisense.
+
+	settings-> mouse scroll zoom
+
+
+** NOTE:
+	-python Django is 100% case sensitive.
+
+	
+** why framework:
+	-framework is ready structure.
+	-
+
+
+** Hard Coded Coding:
+	-project done with coding not using any framework.
+	-No framework means coder has defined by him where to define function,
+	where to do what, where to call what ..etc
+	-new developers trouble first understanding the code.
+	-in case of framework structure is already defined.
+
+	-Faster Development : less manual coding required
+
+	-Scaling is easy 
+
+
+** Django:
+	-Open Source
+	-Scalable:
+		very imp that's why python is that popular.
+	-Using library/packages:
+			-means using functions in library/packages.
+	-OOP
+
+	-Pththon can be used to built:
+		-web application
+		-computer software
+		-DB management
+		-Data Science
+		-Machine Learning
+		-Network Monitoring Softwares eg. Jio, Airtel.
+		-Game Development.
+		-Platform independent
+
+**What is Virtual ENvironment:
+	-when we want to use diffrenet software in same machine or
+	different versions of same software
+	that time we need to create vitual environment.
+	in some folder we'll install the software ..the software will feel that it is working 
+	in real time time environment.
+
+** Question:
+
+do you know Django?
+	-if YES, he/she know settings, where to define function , etc.
+
+
+
+
+
+
+---------------------------------------Day-23  18/Apr/23---------------------------------------
+html, css, bootstrap, wordpress, python. - google map buisness account, web master, site mapping etc
+
+---------------------------------------Day-22  16/Apr/23---------------------------------------
+---------------
+cpanel login details: 
+
+	http://interns2-es.co.in/cpanel
+
+	Username : interns2
+	Password : wW3xLTx4Zy*
+---------------
+
+internship title : web development, python programming, Django framework.
+
+project : project name.
+
+->Take printout of page conataining : 
+	"signature of external internship supervisor"
+
+->internship certificate
+	->1. allotment letter
+	->2. internship certificate
+
+->swami sir details :
+	swami@elitesoftwares.co.in
+	9096622683
+
+
+
+->project
+->project report
+->project ppt
+NOTE: ppt and report are almost same.
+
+
+***** PPT presentaion:
+
+->change content, images according to your project.
+->try to include more and more screen shots in ppt.
+	->Project Name
+
+******
+->first change data, images, content according to your project.
+->try to include more and more images.
+
+->why this project.?? problem we are trying to solve..
+->she will be profesional working housewife.
+	outcum:
+		->utilising time
+		->financial freedem 
+
+->scope of project
+	->in future what can be added.
+	->what can be done in future.
+	->multiple company .
+
+->create your own subdomain name:
+	->theory what is domain, subdomain.
+	->add domain name reg ss, godaddy ss, domain price.
+	->what is cPanel->cpanel login ss, cPanel dashboard login ss
+	->
+	->hosting ss->portfolio site add portpholio site/any other site ss
+	->fontend SS
+
+
+intro/frontend/title
+objective /motivation/scope
+about
+future scope.
+
+->download multipgae website 
+	->new opening on clicking on menu NOT scrolling on same page.
+	->design should conatain atleast 4 pages.
+
+	find images related to your project - change images, content of design.
+
+** ->logo creation site.
+
+->sir will send frontend Django project
+	->we need to chnage onlly conte, images
+
+** ScreenShot
+	
+	->add domain reg,successfully subdomain created, cPanel, ftp ss.
+	->home
+	->login
+	->dashboard
+
+   NOTE:    - try to add hod name, higlight it and take ss.
+
+cmd to create janjo project
+cmd to run jango project
+how to install jango project.
+	
+
+---------
+        ->attendence sheet
+	->evaluation sheet
+
+
+---------------------------------------Day-20  12/Apr/23---------------------------------------
+add-on domain
+
+website :
+	-where buisness info is visible.
+
+e-commerce website :
+	-from where we can purchase product.
+	-where money is involved.
+
+browser compatibilty:
+	-usually on govrt sites written that best view on ..browser..version.
+	as they have tested it there only.
+
+Home Page: main/default page of our site.
+Dashboard site: 
+
+
+wordpress: content management system.
+		-recommended for e-com websites.
+
+		-not for buisness websites.
+
+plug-i :
+	-adding external thing in our project.
+	-eg. payment gateway plugin like instamojo, pay u money, razorPay.
+---------------------------------------------------
+->install wp
+->wp-admin login
+->install theme (astra)
+(->install plug-in)
+->import design
+
+
+
+-------------------------------------------------------
+->login to cPanel
+
+->wordpress installation on subdomain.
+	->softwares->wordpress->install
+
+	installation page:
+	->choose installation URL: select subdomain where you want to install/show e-com website,
+	->remove wt(in dirctory)(otherwise our site will be visible in wp folder in subdomain i.e subdomain/wp ) 
+	->6.2 version (latest version)
+
+	->Admin Account
+		->username
+		->password
+	
+		->email Id (can be used for Recovery)
+
+
+	->click install
+
+	successfully installed wordpress mag..!!
+
+
+->where to access it./ Login to wordpress admin
+	
+	->domain name/wp-admin OR subdomain name/wp-admin
+	->shrutipatil.interns2-es.co.in/wp-admin or shrutipatil.interns2-es.co.in/wp-login 
+
+		->install themes in appearance.
+		->wp dashboard->apperance->themes->search themes
+			->"astra" / "astral" / "ocean"- free good theme.->add theme(now files are added to subdomain)
+			->install (must install and activate package(i.e theme))
+			-> if theme is activated customize option will be visible on theme.(its like import theme designs)(after activate we can use designs in theme)
+				and theme name will be visble in left sidebar.
+
+		->in left side bar
+		->appearance->starter template->select Page Builder.
+
+
+->install design on domain
+	->appe
+elementor
+
+take images with same size from client.
+-------------------------------
+chnage theme images, content etc
+------------------------------------------
+
+how why wordpress created?
+	-wp was created specially to write blog.
+	-wp is cms platform
+Disadvantages of wp:
+	-there are limitations for using wp
+	-cannot check code
+	-can check code but its risky as design could currupt.
+	-we can add only things which are given in pulug-in not other than that.
+	-code is not in our control.
+
+-----------------------------------------------
+==================================================
+Integrating payment gateways.
+
+https://www.instamojo.com/
+	->sign-up
+
+	->payments/store->select payment
+
+	->further details. ->submit.
+
+dashboard:
+	->payment
+
+
+Need to install Instamojo Plug-in
+	->dashboard
+	->plug-in
+	->search instamojo->Instamoho for Woocommerce by instamojo
+	->install and activate it.
+    plug-in is installed for instamojo..!!
+
+	->plug-in->installed plug-in
+	->WooCommerce->
+	->goto imstamojo site->api & plug-ins->generate credentials
+		->chooose a platform/framework->wordpress
+	->client Id & Client secret will be given ->copy that
+
+	->paste it in wordpress admin.	
+	
+	->payment gateways is integrated successfully..!!!
+
+------------
+WooCommerce->orders->order details
+
+
+
+why payment gateway if we have Gpay, Paytym?
+->get to add credit card 
+--------------------------------------------------
+wooCommerce
+corelldraw
+explore coupen
+call to just dial
+create e-com site for any small buisness for selling their product.
+
+---------------------------------------------------
+service based vs product based
+product: 
+	-software created future by consucting analysing problem.
+	-creating, testing our own software on our own. 
+	-you have software ready, now you are looking for client.
+	-eg.
+	user will use that service
+
+service based:
+	-
+---------------------------------------------------
+log-book
+	task 
+		-creating own payment gateways account and integrate in site.
+->go task wise
+->add screen shots
+
+
+
+-------------------------------
+-understand problem
+-think about recurring buisness (making money even when we are not working)
+-------------------------------
+Questions?
+
+what is mean by themes?
+->bundle/package where different designs are available. 
+
+
+NOTE: elimentor Wordpress Editor.
+		
 ---------------------------------------Day-19  28/March/23---------------------------------------
  interns2
 wW3xLTx4Zy
@@ -21,6 +708,50 @@ cPanel->
 -cgi/bin is default folder, wee can delete it.
 -this folder is automatically created in our root directory.
 -with the help of cgi-bin folder we can locate/identify our root directory. 
+
+========================================================
+
+ChatBot Integration :
+	
+	tawkto is one of the free charbot provider.
+
+	goto-> https://www.tawk.to/
+		->sign in to this site
+			->4 steps 1) language-English
+				  2) site name-My Site, URl-optional, Widget Name-to help
+				  3) Install widget
+				  4) Copy to Clipboard. (save the js-Copy and paste it in notepad)	
+					click->Done
+
+	->now paste that script just above </body> tag close in our index file.
+	->upload index.html to cPanel.(only index file no need to upload all files.)
+
+* TIP : Always Check Date Modified of File While Uploading.
+
+	->
+
+
+* On-table Deal. is Good .	
+	more meetings will waste time on both site.
+	if we are not able to crack deal on time, that means we are not 
+	giving proper quotation.
+
+* Know your client.
+
+===========================
+keywords to search:
+autoreply chatbot
+drupal
+shopify
+joomla
+Magento 1.x
+Big Commerce
+Opencart 1.x
+Opencart1.5x
+ZenCart
+WHMCS
+
+
 
 
 https://www.tawk.to/
@@ -665,9 +1396,12 @@ shared hosting
 
 -----------------------------------------------------------------------------------
 If you are wainting then 
-you are not careting
+you are not creating
+
 ************* Week Revise *********
 -hosting service
+	
+	-Hosting means Buying server space.
 
 What is registrar in WHOIS?
 The registrant is the legal owner of the domain who registered it.
@@ -820,7 +1554,7 @@ subdomain:
 
 
 
-
+** Domain names are case insensitive.
 
 
 =====================================================================
